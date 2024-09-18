@@ -1,6 +1,6 @@
 from datetime import datetime
 from typing import Tuple
-from pydantic import BaseModel, EmailStr, PositiveFloat, PositiveInt, validate_call 
+from pydantic import BaseModel, EmailStr, PositiveFloat, PositiveInt #, validate_call 
 from enum import Enum
 
 class ProdutoEnum(str, Enum):
