@@ -1,0 +1,9 @@
+site_name: My 1st class in python
+
+theme:
+  name: "material"
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python

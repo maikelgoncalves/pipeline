@@ -1,6 +1,6 @@
 from datetime import datetime
 from typing import Tuple
-from pydantic import BaseModel, EmailStr, PositiveFloat, PositiveInt #, validate_call 
+from pydantic import BaseModel, EmailStr, PositiveFloat, PositiveInt 
 from enum import Enum
 
 class ProdutoEnum(str, Enum):
@@ -9,12 +9,21 @@ class ProdutoEnum(str, Enum):
     produto3 = "Produto C"
 
 class Vendas(BaseModel):
-        email: EmailStr
-        data: datetime
-        valor: PositiveFloat
-        qtde: PositiveInt
-        produto: ProdutoEnum
+        
+    """
+    Classe de vendas do meu banco de dados
 
-        # @validate_call('produto')
-        # def validacao_produto(cls, v):
-        #     return v
+    Args:
+        email (EmailStr): email do comprador
+        data (datetime): data da comra
+        valor (PositiveFloat): valor da compra
+        qtde (PositiveInt): qtde de produtos
+        produto (ProdutoEnum): produto
+
+    """
+
+    email: EmailStr
+    data: datetime
+    valor: PositiveFloat
+    qtde: PositiveInt
+    produto: ProdutoEnum
